@@ -6,7 +6,6 @@ var logger = require("morgan");
 var cors = require("cors");
 
 // 라우터 불러오기
-var usersRouter = require("./routes/users");
 var authRouter = require("./routes/auth");
 var jobsRouter = require("./routes/jobs_api");
 const applicationsApi = require("./routes/applications_api");
@@ -33,7 +32,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 // 라우터 연결
-app.use("/users", usersRouter);
 app.use("/auth", authRouter);
 app.use("/jobs", jobsRouter);
 app.use("/applications", applicationsApi); // 지원 관리 API 경로 추가

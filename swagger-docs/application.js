@@ -1,3 +1,4 @@
+// swagger-docs/application.js
 /**
  * @swagger
  * /applications:
@@ -24,36 +25,85 @@
  *       500:
  *         description: 서버 오류
  */
+
 /**
  * @swagger
- * /applications:
+ * /applications/view:
  *   get:
- *     summary: 지원 내역 조회
+ *     summary: 사용자의 지원 내역 조회
+ *     description: 인증된 사용자의 지원 내역을 조회합니다.
  *     tags: [Applications]
  *     security:
  *       - bearerAuth: []
- *     parameters:
- *       - in: query
- *         name: status
- *         schema:
- *           type: string
- *           description: 지원 상태 (예: applied, cancelled)
- *       - in: query
- *         name: sortBy
- *         schema:
- *           type: string
- *           description: 정렬 기준 필드 (기본값: appliedAt)
- *       - in: query
- *         name: order
- *         schema:
- *           type: string
- *           description: 정렬 순서 (ASC 또는 DESC, 기본값: DESC)
  *     responses:
  *       200:
- *         description: 지원 내역 목록
+ *         description: 지원 내역 조회 성공
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: 사용자 지원 내역 조회 성공
+ *                 applications:
+ *                   type: array
+ *                   items:
+ *                     type: object
+ *                     properties:
+ *                       id:
+ *                         type: integer
+ *                         example: 1
+ *                       userId:
+ *                         type: integer
+ *                         example: 10
+ *                       jobPostingId:
+ *                         type: integer
+ *                         example: 5
+ *                       status:
+ *                         type: string
+ *                         example: applied
+ *                       appliedAt:
+ *                         type: string
+ *                         format: date-time
+ *                         example: 2023-12-15T12:34:56.000Z
+ *                       jobPosting:
+ *                         type: object
+ *                         properties:
+ *                           title:
+ *                             type: string
+ *                             example: Software Engineer
+ *                           company:
+ *                             type: string
+ *                             example: OpenAI
+ *                           location:
+ *                             type: string
+ *                             example: San Francisco, CA
+ *                           deadline:
+ *                             type: string
+ *                             example: 2024-01-15
+ *       404:
+ *         description: 지원 내역 없음
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: 지원 내역이 없습니다.
  *       500:
  *         description: 서버 오류
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 error:
+ *                   type: string
+ *                   example: 서버 오류가 발생했습니다.
  */
+
 /**
  * @swagger
  * /applications/{id}:

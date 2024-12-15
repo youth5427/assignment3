@@ -38,7 +38,10 @@ const Application = sequelize.define(
 );
 
 // 외래키 설정
-Application.belongsTo(JobPosting, { foreignKey: "jobPostingId" });
+Application.belongsTo(JobPosting, {
+  foreignKey: "jobPostingId",
+  as: "jobPosting", // alias 명시적으로 설정
+});
 Application.belongsTo(User, { foreignKey: "userId" });
 
 module.exports = Application;
