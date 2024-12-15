@@ -115,6 +115,14 @@ WSD-Assignment-03/
 - **Python**: 크롤링 스크립트.
 - **Swagger**: API 문서화.
 
+## 크롤링 코드 실행 방법
+
+파이썬(py) 설치 후, 프로젝트 위치에서 아래 명령어로 실행 가능
+
+```bash
+python crawling.py
+```
+
 ## API 문서
 
 프로젝트 실행 후, [http://localhost:3000/api-docs](http://localhost:3000/api-docs)에서 Swagger 문서를 확인할 수 있습니다.
