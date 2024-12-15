@@ -46,45 +46,9 @@ node app.js
 회원가입
 Endpoint: POST /auth/register
 설명: 새로운 사용자를 등록합니다.
-필요한 데이터:
-json
-코드 복사
-{
-  "username": "newuser",
-  "password": "securepassword123",
-  "email": "user@example.com",
-  "role": "user"
-}
-응답 예시:
-json
-코드 복사
-{
-  "message": "회원가입 성공",
-  "userId": 1,
-  "role": "user"
-}
 로그인
 Endpoint: POST /auth/login
 설명: 사용자 인증 후 JWT 토큰을 발급받습니다.
-필요한 데이터:
-json
-코드 복사
-{
-  "username": "usertest",
-  "password": "123"
-}
-응답 예시:
-json
-코드 복사
-{
-  "message": "로그인 성공",
-  "token": "<JWT_TOKEN>",
-  "user": {
-    "id": 1,
-    "username": "usertest",
-    "email": "user@example.com"
-  }
-}
 2. Jobs (채용 공고 관련)
 공고 목록 조회
 Endpoint: GET /jobs
@@ -94,107 +58,23 @@ page (기본값: 1)
 sortBy (예: id, 기본값: id)
 order (예: ASC, DESC, 기본값: ASC)
 location, experience, salary, keyword
-응답 예시:
-json
-코드 복사
-{
-  "total": 100,
-  "jobs": [
-    {
-      "id": 1,
-      "title": "Software Engineer",
-      "company": "OpenAI",
-      "location": "San Francisco, CA",
-      "salary": "100000",
-      "deadline": "2024-01-15"
-    }
-  ],
-  "page": 1,
-  "pageSize": 10
-}
 공고 상세 조회
 Endpoint: GET /jobs/{id}
 설명: 특정 ID를 기반으로 채용 공고의 상세 정보를 조회합니다.
-응답 예시:
-json
-코드 복사
-{
-  "id": 1,
-  "company": "OpenAI",
-  "title": "Software Engineer",
-  "location": "San Francisco, CA",
-  "experience": "3 years",
-  "salary": "100000",
-  "views": 200
-}
 3. Applications (지원 관련)
 지원하기
 Endpoint: POST /applications
 설명: 사용자가 특정 공고에 지원합니다.
-필요한 데이터:
-json
-코드 복사
-{
-  "jobPostingId": 12
-}
-응답 예시:
-json
-코드 복사
-{
-  "message": "지원 완료",
-  "application": {
-    "id": 1,
-    "jobPostingId": 12,
-    "status": "applied",
-    "appliedAt": "2024-12-15T12:34:56.000Z"
-  }
-}
 지원 내역 조회
 Endpoint: GET /applications/view
 설명: 사용자가 지원한 내역을 조회합니다.
-응답 예시:
-json
-코드 복사
-{
-  "message": "사용자 지원 내역 조회 성공",
-  "applications": [
-    {
-      "id": 1,
-      "jobPostingId": 12,
-      "status": "applied",
-      "appliedAt": "2024-12-15T12:34:56.000Z",
-      "jobPosting": {
-        "title": "Software Engineer",
-        "company": "OpenAI",
-        "location": "San Francisco, CA",
-        "deadline": "2024-01-15"
-      }
-    }
-  ]
-}
 지원 취소
 Endpoint: DELETE /applications/{id}
 설명: 특정 지원 내역을 취소합니다.
-응답 예시:
-json
-코드 복사
-{
-  "message": "지원 취소 완료",
-  "application": {
-    "id": 1,
-    "status": "cancelled"
-  }
-}
 4. ETC (기타)
 데이터 통계 조회
 Endpoint: GET /etc
 설명: 총 데이터 갯수를 반환합니다.
-응답 예시:
-json
-코드 복사
-{
-  "total": 200
-}
 ```
 
 ## 파일 구조
