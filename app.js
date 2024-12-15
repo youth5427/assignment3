@@ -8,7 +8,8 @@ var cors = require("cors");
 // 라우터 불러오기
 var authRouter = require("./routes/auth");
 var jobsRouter = require("./routes/jobs_api");
-const applicationsApi = require("./routes/applications_api");
+var applicationsApi = require("./routes/applications_api");
+var etcRouter = require("./routes/etc_api");
 
 // Swagger 설정 불러오기
 var swaggerSetup = require("./config/swagger");
@@ -35,6 +36,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/auth", authRouter);
 app.use("/jobs", jobsRouter);
 app.use("/applications", applicationsApi); // 지원 관리 API 경로 추가
+app.use("/etc", etcRouter); // 지원 관리 API 경로 추가
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

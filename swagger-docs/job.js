@@ -89,6 +89,7 @@
  *     summary: 공고 상세 조회
  *     description: >
  *       특정 ID를 기반으로 채용 공고의 상세 정보를 조회합니다.
+ *       조회할 때마다 해당 공고의 조회수(view)가 증가합니다.
  *     tags: [Jobs]
  *     parameters:
  *       - name: id

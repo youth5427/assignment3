@@ -22,10 +22,6 @@ const swaggerOptions = {
     ],
     tags: [
       {
-        name: "Auth",
-        description: "인증 관련 API",
-      },
-      {
         name: "Jobs",
         description: "채용 공고 관련 API",
       },
@@ -36,6 +32,10 @@ const swaggerOptions = {
       {
         name: "Applications",
         description: "지원 관리 API",
+      },
+      {
+        name: "etc",
+        description: "기타 API",
       },
     ],
     components: {

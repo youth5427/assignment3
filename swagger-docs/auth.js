@@ -4,7 +4,7 @@
  * /auth/register:
  *   post:
  *     summary: 회원가입
- *     description: 새로운 사용자를 등록합니다. 역할은 admin 또는 user만 입력 가능합니다.
+ *     description: 새로운 사용자를 등록합니다.
  *     tags: [Users]
  *     requestBody:
  *       required: true
@@ -101,7 +101,7 @@
  * /auth/profile:
  *   put:
  *     summary: 회원 정보 수정
- *     description: 회원의 이메일 주소, 사용자 이름을 수정하거나 비밀번호를 변경합니다. Access Token이 필요합니다.
+ *     description: 회원의 이메일 주소, 사용자 이름을 수정하거나 비밀번호를 변경합니다. admin 역할만 입력 가능합니다.
  *     tags: [Users]
  *     security:
  *       - bearerAuth: [] # Swagger에서 Bearer Token 사용 설정

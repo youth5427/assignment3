@@ -4,6 +4,7 @@
  * /applications:
  *   post:
  *     summary: 지원하기
+ *     description: 인증된 사용자만이 지원할 수 있습니다.
  *     tags: [Applications]
  *     security:
  *       - bearerAuth: []
