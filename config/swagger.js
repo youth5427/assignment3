@@ -13,7 +13,7 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: "http://113.198.66.75:17246",
+        url: "http://113.198.66.75:13192",
         description: "Production server",
       },
       {
