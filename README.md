@@ -24,8 +24,8 @@ WSD-Assignment-03은 Node.js를 기반으로 한 웹 애플리케이션 프로�
 
 ```bash
 # 프로젝트 클론
-git clone <repository-url>
-cd WSD-Assignment-03
+git clone https://github.com/youth5427/assignment3
+cd assignment3
 
 # 의존성 설치
 npm install
