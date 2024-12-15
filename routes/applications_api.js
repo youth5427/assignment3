@@ -57,7 +57,10 @@ router.get("/view", authenticateToken, async (req, res) => {
   try {
     // 사용자 지원 내역 조회
     const applications = await Application.findAll({
-      where: { userId },
+      where: {
+        userId,
+        status: "applied", // 지원 상태가 "applied"인 경우만 필터링
+      },
       include: [
         {
           model: JobPosting,
