@@ -41,41 +41,39 @@ node app.js
 
 ## 엔드포인트
 
-```
 1. Users (사용자 관련)
-회원가입
-Endpoint: POST /auth/register
-설명: 새로운 사용자를 등록합니다.
-로그인
-Endpoint: POST /auth/login
-설명: 사용자 인증 후 JWT 토큰을 발급받습니다.
+   회원가입
+   Endpoint: POST /auth/register
+   설명: 새로운 사용자를 등록합니다.
+   로그인
+   Endpoint: POST /auth/login
+   설명: 사용자 인증 후 JWT 토큰을 발급받습니다.
 2. Jobs (채용 공고 관련)
-공고 목록 조회
-Endpoint: GET /jobs
-설명: 공고를 페이지네이션, 필터링, 정렬 옵션으로 조회합니다.
-필터 및 정렬 옵션:
-page (기본값: 1)
-sortBy (예: id, 기본값: id)
-order (예: ASC, DESC, 기본값: ASC)
-location, experience, salary, keyword
-공고 상세 조회
-Endpoint: GET /jobs/{id}
-설명: 특정 ID를 기반으로 채용 공고의 상세 정보를 조회합니다.
+   공고 목록 조회
+   Endpoint: GET /jobs
+   설명: 공고를 페이지네이션, 필터링, 정렬 옵션으로 조회합니다.
+   필터 및 정렬 옵션:
+   page (기본값: 1)
+   sortBy (예: id, 기본값: id)
+   order (예: ASC, DESC, 기본값: ASC)
+   location, experience, salary, keyword
+   공고 상세 조회
+   Endpoint: GET /jobs/{id}
+   설명: 특정 ID를 기반으로 채용 공고의 상세 정보를 조회합니다.
 3. Applications (지원 관련)
-지원하기
-Endpoint: POST /applications
-설명: 사용자가 특정 공고에 지원합니다.
-지원 내역 조회
-Endpoint: GET /applications/view
-설명: 사용자가 지원한 내역을 조회합니다.
-지원 취소
-Endpoint: DELETE /applications/{id}
-설명: 특정 지원 내역을 취소합니다.
+   지원하기
+   Endpoint: POST /applications
+   설명: 사용자가 특정 공고에 지원합니다.
+   지원 내역 조회
+   Endpoint: GET /applications/view
+   설명: 사용자가 지원한 내역을 조회합니다.
+   지원 취소
+   Endpoint: DELETE /applications/{id}
+   설명: 특정 지원 내역을 취소합니다.
 4. ETC (기타)
-데이터 통계 조회
-Endpoint: GET /etc
-설명: 총 데이터 갯수를 반환합니다.
-```
+   데이터 통계 조회
+   Endpoint: GET /etc
+   설명: 총 데이터 갯수를 반환합니다.
 
 ## 파일 구조
 
