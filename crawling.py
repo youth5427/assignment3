@@ -152,8 +152,8 @@ if __name__ == "__main__":
     save_to_mariadb(
         jobs,
         host='113.198.66.75',
-        user='root',
+        user='ysh',
         password='0831',
-        port=13246,
+        port=13124,
         database='ysh'
     )
