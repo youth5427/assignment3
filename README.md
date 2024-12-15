@@ -123,6 +123,8 @@ WSD-Assignment-03/
 python crawling.py
 ```
 
+크롤링 코드를 실행 시, 구인 정보를 크롤링하여 데이터베이스 서버에 저장됩니다. (Jcloud port:124)
+
 ## API 문서
 
 프로젝트 실행 후, [http://localhost:3000/api-docs](http://localhost:3000/api-docs)에서 Swagger 문서를 확인할 수 있습니다.
